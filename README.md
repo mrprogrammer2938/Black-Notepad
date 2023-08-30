@@ -8,8 +8,10 @@ Black Notepad v1.0
 
 [![Black-Notepad Screen](https://github.com/mrprogrammer2938/Black-Notepad/blob/master/Scr/black-noterpad-scr3.jpg "Black-Notepad")](https://github.com/mrprogrammer2938/Black-Notepad)
 
+### Installing On Windows 
+Click [Download]()
 
-### Installing On Linux
+### Installing On Linux Ans MacOS
 ``` bash
 git clone https://github.com/mrprogrammer2938/Black-Notepad
 cd Black-Notepad
