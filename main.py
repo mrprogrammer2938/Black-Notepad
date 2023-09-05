@@ -51,7 +51,7 @@ class Window(QMainWindow):
         
         self.file.addAction(QIcon("./Icon/new_file.png"),"New File",self.new_file)
         self.file.addAction(QIcon("./Icon/open_file.png"),"Open File",self.open_file)
-        self.file.addAction(QIcon("./Icon/save_file.png"),"Save File",self.save_file)
+        self.file.addAction(QIcon("./Icon/save_file.jpg"),"Save File",self.save_file)
         self.file.addAction(QIcon("./Icon/save_as.jpg"),"Save As",self.save_as)
         self.file.addAction(QIcon("./Icon/star.png"),"Star",self.star_file)
         self.file.addAction(QIcon("./Icon/bookmark.png"),"Bookmark",self.bookmark)
