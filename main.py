@@ -28,7 +28,7 @@ class Window(QMainWindow):
         
         font = QFont()
         font.setFamily("Arial")
-        font.setPointSize(14)
+        font.setPointSize(16)
         
         self.text = QTextEdit(self)
         self.text.setFont(font)
@@ -113,16 +113,10 @@ class Window(QMainWindow):
         tools.addAction(QIcon("./Icon/star.png"),"Star",self.star_file)
         tools.addAction(QIcon("./Icon/help_icon.png"),"Help",self.help_)
         tools.addAction(QIcon("./Icon/exit_icon.png"),"Exit",self.close)
-    def undo(self):
-        self.text.undo()
-    def redo(self):
-        self.text.redo()
-    def copy(self):
+
+    def copy_text(self):
+        self.text.selectAll()
         self.text.copy()
-    def paste(self):
-        self.text.paste()
-    def cut(self):
-        self.text.cut()
     def star_file(self):
         try:
             if self.n_line == True:
@@ -355,7 +349,8 @@ Weblog: sinameysami.blogfa.com
         elif f == "bee":
             self.bee()
     def light(self):
-        qtmodern.styles.light(QApplication.instance())   
+        qdarktheme.setup_theme("light")
+        #qtmodern.styles.light(QApplication.instance())   
         self.text.setStyleSheet("""
 QTextEdit {
     color: #000;
@@ -368,7 +363,8 @@ QTextEdit {
         f.write("light")
         f.close()
     def dark(self):
-        qtmodern.styles.dark(QApplication.instance())
+        qdarktheme.setup_theme("dark")
+        #qtmodern.styles.dark(QApplication.instance())
         self.text.setStyleSheet("""
 QTextEdit {
     color: white;
@@ -381,7 +377,7 @@ QTextEdit {
         f.write("dark")
         f.close()
     def matrix(self):
-        qtmodern.styles.dark(QApplication.instance()) 
+        qdarktheme.setup_theme("dark")
         self.text.setStyleSheet("""
 QTextEdit {
     color: lightgreen;
@@ -394,7 +390,7 @@ QTextEdit {
         f.write("matrix")
         f.close()
     def sky(self):
-        qtmodern.styles.light(QApplication.instance()) 
+        qdarktheme.setup_theme("light")
         self.text.setStyleSheet("""
 QTextEdit {
     color: lightblue;
@@ -407,7 +403,7 @@ QTextEdit {
         f.write("sky")
         f.close()
     def bee(self):
-        qtmodern.styles.dark(QApplication.instance()) 
+        qdarktheme.setup_theme("dark")
         self.text.setStyleSheet("""
 QTextEdit {
     color: yellow;
