@@ -111,7 +111,7 @@ class Window(QMainWindow):
         self.addToolBar(tools)
         tools.addAction(QIcon("./Icon/new_file.png"),"New File",self.new_file)
         tools.addAction(QIcon("./Icon/open_file.png"),"Open File",self.open_file)
-        tools.addAction(QIcon("./Iconsave_file.png"),"Save File",self.save_file)
+        tools.addAction(QIcon("./Icon/save_file.png"),"Save File",self.save_file)
         tools.addAction(QIcon("./Icon/save_as.jpg"),"Save As",self.save_as)
         tools.addAction(QIcon("./Icon/star.png"),"Star",self.star_file)
         tools.addAction(QIcon("./Icon/help_icon.png"),"Help",self.help_)
