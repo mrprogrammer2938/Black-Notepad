@@ -131,7 +131,7 @@ class Window(QMainWindow):
             if self.n_line == True:
                 file_path = self.file_path
                 if file_path != "" and file_path != " ":
-                    file = open(f"bookmark.txt","a")
+                    file = open(f"./Data/bookmark.txt","a")
                     file.write(f"{file_path}")
                     file.close()
                     self.n_line = False
@@ -141,7 +141,7 @@ class Window(QMainWindow):
             else:
                     file_path = self.file_path
                     if file_path != "" and file_path != " ":
-                        file = open(f"bookmark.txt","a")
+                        file = open(f"./Data/bookmark.txt","a")
                         file.write(f"\n{file_path}")
                         file.close()
                         print(False)
@@ -160,7 +160,7 @@ class Window(QMainWindow):
             self.mylist.resize(500,380)
             self.mylist.itemDoubleClicked.connect(self.open_file_list)
             dlg.setCentralWidget(self.mylist)
-            file = open("bookmark.txt","r").readlines()
+            file = open("./Data/bookmark.txt","r").readlines()
             for item in file:
                 item = item.strip()
                 self.mylist.addItem(item)
@@ -346,7 +346,7 @@ Weblog: sinameysami.blogfa.com
         self.text.setTextColor(font_color)
     # ----- Theme -----
     def set_theme(self):
-        f = open("theme.txt","r").read()
+        f = open("./Data/theme.txt","r").read()
         if f == "light":
             self.light()
         elif f == "dark":
@@ -367,7 +367,7 @@ QTextEdit {
 }
                                 
 """)                     
-        f = open("theme.txt","w")
+        f = open("./Data/theme.txt","w")
         f.write("light")
         f.close()
     def dark(self):
@@ -380,7 +380,7 @@ QTextEdit {
 }
                                 
 """)
-        f = open("theme.txt","w")
+        f = open("./Data/theme.txt","w")
         f.write("dark")
         f.close()
     def matrix(self):
@@ -393,7 +393,7 @@ QTextEdit {
 }
                                 
 """)
-        f = open("theme.txt","w")
+        f = open("./Data/theme.txt","w")
         f.write("matrix")
         f.close()
     def sky(self):
@@ -406,7 +406,7 @@ QTextEdit {
 }
                                 
 """)
-        f = open("theme.txt","w")
+        f = open("./Data/theme.txt","w")
         f.write("sky")
         f.close()
     def bee(self):
@@ -417,7 +417,7 @@ QTextEdit {
     background-color: #000;    
 }                          
 """)
-        f = open("theme.txt","w")
+        f = open("./Data/theme.txt","w")
         f.write("bee")
         f.close()
     def copy_text(self):
