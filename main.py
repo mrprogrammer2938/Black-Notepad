@@ -20,7 +20,6 @@ height = 700
 class Window(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        qdarktheme.setup_theme("dark")
         self.file = False
         self.file_path = ""
         self.n_line = True
@@ -62,18 +61,18 @@ class Window(QMainWindow):
         self.font.addAction("Set Font",self.font_dialog)
         self.font.addAction("Set Font Size",self.font_size)
         self.font.addAction("Set Font Color",self.font_color)
-        self.theme.addAction("Light",self.light)
-        self.theme.addAction("Dark",self.dark)
+        self.theme.addAction("&Light",self.light)
+        self.theme.addAction("&Dark",self.dark)
         self.theme.addAction("Matrix",self.matrix)
         self.theme.addAction("Sky",self.sky)
         self.theme.addAction("Bee",self.bee)
         
-        self.edit.addAction("Undo",self.text.undo)
-        self.edit.addAction("Redo",self.text.redo)
+        self.edit.addAction("&Undo",self.text.undo)
+        self.edit.addAction("&Redo",self.text.redo)
         self.edit.addSeparator()
-        self.edit.addAction("Cut",self.text.cut)
-        self.edit.addAction("Copy",self.copy_text)
-        self.edit.addAction("Paste",self.text.paste)
+        self.edit.addAction("&Cut",self.text.cut)
+        self.edit.addAction("&Copy",self.copy_text)
+        self.edit.addAction("&Paste",self.text.paste)
         self.edit.addSeparator()
         self.edit.addAction("Select All",self.text.selectAll)
         self.edit.addAction("Clear All",self.text.clear)
