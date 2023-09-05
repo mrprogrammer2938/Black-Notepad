@@ -9,8 +9,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtPrintSupport import *
 import qdarktheme
-import qtmodern.styles
-import qtmodern.windows
 import sys,platform
 
 width = 1000
