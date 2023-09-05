@@ -25,7 +25,7 @@ class Window(QMainWindow):
         self.file_path = ""
         self.n_line = True
         self.setWindowTitle("Notepad - New File")
-        self.setWindowIcon(QIcon("black-notepad-icon.ico"))
+        self.setWindowIcon(QIcon("./Icon/black-notepad-icon.ico"))
         self.setGeometry(500,150,width,height)
     
         
@@ -49,16 +49,16 @@ class Window(QMainWindow):
         self.view = self.menu_.addMenu("&View")
         self.help = self.menu_.addMenu("&Help")
         
-        self.file.addAction(QIcon("new_file.png"),"New File",self.new_file)
-        self.file.addAction(QIcon("open_file.png"),"Open File",self.open_file)
-        self.file.addAction(QIcon("save_file.png"),"Save File",self.save_file)
-        self.file.addAction(QIcon("save_as.jpg"),"Save As",self.save_as)
-        self.file.addAction(QIcon("star.png"),"Star",self.star_file)
-        self.file.addAction(QIcon("bookmark.png"),"Bookmark",self.bookmark)
+        self.file.addAction(QIcon("./Icon/new_file.png"),"New File",self.new_file)
+        self.file.addAction(QIcon("./Icon/open_file.png"),"Open File",self.open_file)
+        self.file.addAction(QIcon("./Icon/save_file.png"),"Save File",self.save_file)
+        self.file.addAction(QIcon("./Icon/save_as.jpg"),"Save As",self.save_as)
+        self.file.addAction(QIcon("./Icon/star.png"),"Star",self.star_file)
+        self.file.addAction(QIcon("./Icon/bookmark.png"),"Bookmark",self.bookmark)
         self.file.addSeparator()
-        self.file.addAction(QIcon("printer.ico"),"Print",self.print_dialog)
+        self.file.addAction(QIcon("./Icon/printer.ico"),"Print",self.print_dialog)
         self.file.addSeparator()
-        self.file.addAction(QIcon("exit_icon.png"),"&Exit",self.close)
+        self.file.addAction(QIcon("./Icon/exit_icon.png"),"&Exit",self.close)
         self.font.addAction("Set Font",self.font_dialog)
         self.font.addAction("Set Font Size",self.font_size)
         self.font.addAction("Set Font Color",self.font_color)
@@ -109,13 +109,13 @@ class Window(QMainWindow):
         tools = QToolBar()
         tools.setMovable(False)
         self.addToolBar(tools)
-        tools.addAction(QIcon("new_file.png"),"New File",self.new_file)
-        tools.addAction(QIcon("open_file.png"),"Open File",self.open_file)
-        tools.addAction(QIcon("save_file.png"),"Save File",self.save_file)
-        tools.addAction(QIcon("save_as.jpg"),"Save As",self.save_as)
-        tools.addAction(QIcon("star.png"),"Star",self.star_file)
-        tools.addAction(QIcon("help_icon.png"),"Help",self.help_)
-        tools.addAction(QIcon("exit_icon.png"),"Exit",self.close)
+        tools.addAction(QIcon("./Icon/new_file.png"),"New File",self.new_file)
+        tools.addAction(QIcon("./Icon/open_file.png"),"Open File",self.open_file)
+        tools.addAction(QIcon("./Iconsave_file.png"),"Save File",self.save_file)
+        tools.addAction(QIcon("./Icon/save_as.jpg"),"Save As",self.save_as)
+        tools.addAction(QIcon("./Icon/star.png"),"Star",self.star_file)
+        tools.addAction(QIcon("./Icon/help_icon.png"),"Help",self.help_)
+        tools.addAction(QIcon("./Icon/exit_icon.png"),"Exit",self.close)
     def undo(self):
         self.text.undo()
     def redo(self):
@@ -153,7 +153,7 @@ class Window(QMainWindow):
         try:
             dlg = QMainWindow(self)
             dlg.setWindowTitle("Black-Notepad/Bookmarks")
-            dlg.setWindowIcon(QIcon("black-notepad-icon.ico"))
+            dlg.setWindowIcon(QIcon("./Icon/black-notepad-icon.ico"))
             dlg.setGeometry(700,300,500,400)
             dlg.setFixedSize(500,400)
             self.mylist = QListWidget(dlg)
@@ -265,7 +265,7 @@ Ctrl + B = Bookmark
 """
         dlg = QDialog()
         dlg.setWindowTitle("Black-Notepad/Help")
-        dlg.setWindowIcon(QIcon("black-notepad-icon.ico"))
+        dlg.setWindowIcon(QIcon("./Icon/black-notepad-icon.ico"))
         
         dlg.setGeometry(600,300,width,height)
         t = QTextEdit(dlg)
@@ -292,7 +292,7 @@ Weblog: sinameysami.blogfa.com
 """
         dlg = QDialog()
         dlg.setWindowTitle("Black-Notepad/About")
-        dlg.setWindowIcon(QIcon("black-notepad-icon.ico"))
+        dlg.setWindowIcon(QIcon("./Icon/black-notepad-icon.ico"))
         dlg.setGeometry(600,300,width,height)
         t = QTextEdit(dlg)
         t.setReadOnly(True)
@@ -319,7 +319,7 @@ Weblog: sinameysami.blogfa.com
     def font_size(self):
         dlg = QDialog()
         dlg.setWindowTitle("Set Font Size")
-        dlg.setWindowIcon(QIcon("black-notepad-icon.ico"))
+        dlg.setWindowIcon(QIcon("./Icon/black-notepad-icon.ico"))
         dlg.setFixedSize(122,64)
         
         self.spinbox = QSpinBox(dlg)
