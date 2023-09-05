@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 # Made By Sina Meysami
 # Black-Notepad v1.0
+# 
 #
-
+#
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -337,7 +338,7 @@ Weblog: sinameysami.blogfa.com
         self.text.setTextColor(font_color)
     # ----- Theme -----
     def set_theme(self):
-        f = open("./Data/theme.txt","r").read()
+        f = open("./Data/theme.txt","r").read().strip()
         if f == "light":
             self.light()
         elif f == "dark":
