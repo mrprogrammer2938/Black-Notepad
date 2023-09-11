@@ -97,8 +97,8 @@ class Window(QMainWindow):
         save_key.activated.connect(self.save_file)
         save_as_key = QShortcut(QKeySequence("Ctrl+Shift+S"),self)
         save_as_key.activated.connect(self.save_as)
-        history_key = QShortcut(QKeySequence("Ctrl+H"),self)
-        history_key.activated.connect(self.help_)
+        help_key = QShortcut(QKeySequence("Ctrl+H"),self)
+        help_key.activated.connect(self.help_)
         bookmark_key = QShortcut(QKeySequence("Ctrl+B"),self)
         bookmark_key.activated.connect(self.bookmark)
         
